@@ -23,8 +23,8 @@ compatibility:
   - kotlin
 
 # tecnologies que a stack utiliza
-# todo: colocar lista de tecnologias suportadas
-technologies: ["Kotlin", "SpringBoot"]
+# A lista completa das tecnologias disponiveis que podem ser cadastradas estao disponiveis na Documentacao para consulta
+technologies: ["OpenAPI", "SpringBoot"]
 
 # Especificar um arquivo .md que explique em detalhes o objetivo da stack
 # todo: explicar melhor oque colocar nesse arquivo.
