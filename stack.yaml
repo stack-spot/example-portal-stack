@@ -8,7 +8,7 @@ display-name: Example Portal Stack
 
 # caso a picture esteja fora do repo colocar uma url externa
 # caso a picture esteja no repo fornecer o path
-picture: "foto_da_stack.jpeg"
+picture: "https://urbanarts.vteximg.com.br/arquivos/ids/7460265-1000-1000/486933_Ampliada.jpg"
 
 # Especificar a categoria da stack.
 # Categorias disponíveis:
