@@ -42,7 +42,6 @@ technologies: ["OpenAPI", "SpringBoot"]
 # Se passado, deve ser uma string com o nome do arquivo com extensão .md ou caminho do arquivo .md no repo.
 about: docs/about.md
 
-
 # Trata-se de uma lista de casos de uso 
 # Cada um contendo um título, um caminho para o arquivo .md com um exemplo de utilização da stack e um caminho para o stackfile em questão.
 # É um campo não obrigatório, mas caso seja passado, validamos se os arquivos passados realmente existem no repo.
