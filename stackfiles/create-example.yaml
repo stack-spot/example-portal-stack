@@ -1,0 +1,30 @@
+# Trata-se do tipo do stackfile, se é para uma solução de app (application) ou env (enviroment).
+# É um campo obrigatório, do tipo string, e deve conter os valores "app" ou "env".
+type: app
+
+# Trata-se de um texto curto explicando o stackfile.
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 500 caracteres.
+description: Create a Stackfile Example
+
+# Trata-se de um nome com formatação livre que será exibido no portal.
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 100 caracteres.
+display-name: Example Portal Stackfile
+
+# Trata-se de um texto curto explicando o stackfile.
+# É um campo obrigatório, do tipo string.
+# Faz referência ao template usado no stackfile (example-portal-template) e a stack a qual ele pertence (example-portal-stack).
+template: example-portal-stack/example-portal-template
+
+# Campo gerado pelo cli e não é indexado no portal.
+inputs:
+  project_version: "1.0.0"
+  project_description: "Example"
+  author_name: "John Doe"
+  author_email: "johndoe@mail.com"
+
+# Trata-se da lista de plugins utilizados no stackfile.
+# É um campo não obrigatório, do tipo lista de plugin.
+plugins:
+  # Caso seja passada uma lista de plugins, o campo plugin é uma string obrigatória.
+  # Faz referência ao plugin usado no stackfile (example-portal-plugin) e a stack a qual ele pertence (example-portal-stack).
+  - plugin: example-portal-stack/example-portal-plugin
