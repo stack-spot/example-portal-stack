@@ -1,32 +1,55 @@
-# texto curto explicando o studio
+# Trata-se de um texto curto explicando a stack.
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 500 caracteres.
 description: Example of stack
-# Nome gerado pelo cli em kebab-case
+
+# Trata-se do nome gerado pelo cli em kebab-case.
+# É um campo obrigatório e deve ser uma string de 0 a 100 caracteres.
 name: example-portal-stack
 
-# Nome com formatação livre que será exibido no portal.
+# Trata-se de um nome com formatação livre que será exibido no portal.
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 100 caracteres.
+# Caso não for preenchido receberá o mesmo valor do campo name.
 display-name: Example Portal Stack
 
-# caso a picture esteja fora do repo colocar uma url externa
-# caso a picture esteja no repo fornecer o path
+# Trata-se da imagem utilizada como logo da stack.
+# Caso a picture esteja fora do repo colocar uma url externa
+# Caso a picture esteja no repo fornecer o path
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 200 caracteres.
 picture: "https://urbanarts.vteximg.com.br/arquivos/ids/7460265-1000-1000/486933_Ampliada.jpg"
 
-# Especificar a categoria da stack.
-# Categorias disponíveis:
-# [sre, frontend, backend, fullStack, analytics]
+# Trata-se da categoria a qual a stack pertence.
+# É um campo não obrigatório e caso for preenchido deve ser uma string pertencente a lista de categorias válidas.
+# Para consultar as categorias válidas consulte a documentação oficial.
+# Caso seja preenchido com uma categoria não válida, a mesma não aparecerá no portal.
 category: backend
 
-# Lista de tecnologias que você gostaria de enfatizar que é compativel
+# Trata-se das tecnologias a qual a stack é compativel.
+# É um campo não obrigatório, e caso for preenchido deve ser uma lista de strings livres.
 compatibility:
   - spring
   - kotlin
 
-# tecnologies que a stack utiliza
-# A lista completa das tecnologias disponiveis que podem ser cadastradas estao disponiveis na Documentacao para consulta
+# Trata-se das tecnologias que a stack utiliza.
+# É um campo não obrigatório, e caso for preenchido deve ser uma lista de strings pertencente a lista de tecnologias válidas.
+# Para consultar as tecnologias válidas consulte a documentação oficial.
+# Caso seja preenchido com alguma tecnologias não válida, a mesma não aparecerá no portal. 
+# O restante das tecnologias válidas preenchidas aparecerá normalmente.
 technologies: ["OpenAPI", "SpringBoot"]
 
-# Especificar um arquivo .md que explique em detalhes o objetivo da stack
-# por padrão o valor é about.md
-about: about.md
-# Especificar um arquivo .md com exemplos da utilização da stack.
-# por padrão o valor é useCase.md
-use-case: useCase.md
+# Trata-se de um arquivo .md que explica em detalhes o objetivo da stack.
+# Por padrão o valor é about.md
+# É um campo não obrigatório, mas caso seja passado, validamos se o arquivo realmente existe no repo.
+# Se passado, deve ser uma string com o nome do arquivo com extensão .md ou caminho do arquivo .md no repo.
+about: docs/about.md
+
+
+# Trata-se de uma lista de casos de uso 
+# Cada um contendo um título, um caminho para o arquivo .md com um exemplo de utilização da stack e um caminho para o stackfile em questão.
+# É um campo não obrigatório, mas caso seja passado, validamos se os arquivos passados realmente existem no repo.
+use-cases:
+  - title: Criar um Gateway # string obrigatória de 0 a 200 caracteres
+    content: docs/use-case-gateway.md # string obrigatória com o caminho do arquivo de caso de uso com extensão .md
+    stackfile: stackfiles/create_gateway.yaml # string obrigatória com o caminho do arquivo de stackfile com extensão .yaml ou .yml
+  - title: Criar um S3 
+    content: docs/use-case-s3.md
+    stackfile: stackfiles/create_s3.yaml
