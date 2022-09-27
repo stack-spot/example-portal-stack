@@ -24,7 +24,7 @@ picture: logo_da_stack.jpeg
 # Caso seja preenchido com uma categoria não válida, a mesma não aparecerá no portal.
 category: backend
 
-# Trata-se das tecnologias a qual a stack é compativel.
+# Trata-se das tecnologias as quais a stack é compativel.
 # É um campo não obrigatório, e caso for preenchido deve ser uma lista de strings livres.
 compatibility:
   - spring
