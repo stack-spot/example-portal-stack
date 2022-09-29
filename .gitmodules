@@ -1,0 +1,6 @@
+[submodule "example-portal-template"]
+	path = example-portal-template
+	url = https://github.com/stack-spot/example-portal-template
+[submodule "example-portal-plugin"]
+	path = example-portal-plugin
+	url = https://github.com/stack-spot/example-portal-plugin
