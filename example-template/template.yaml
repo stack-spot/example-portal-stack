@@ -1,0 +1,75 @@
+# Trata-se do nome gerado pelo cli em kebab-case.
+# É um campo obrigatório e deve ser uma string de 0 a 100 caracteres.
+name: example-stack-spot-template
+
+# Trata-se de um texto curto explicando o template.
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 500 caracteres.
+description: Just a example of a template
+
+# Trata-se do tipo do template, se é para uma solução de app (application), env (enviroment) ou ambas.
+# É um campo não obrigatório, do tipo lista de string, e deve conter os valores "app-template", "env-template" ou ambos.
+types:
+  - app-template
+ 
+# Campo gerado pelo cli e não é indexado no portal.
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
+    global: true
+  - label: "GroupId"
+    type: text
+    name: "group_id"
+    default: "com.example"
+    global: true
+
+# Trata-se de um nome com formatação livre que será exibido no portal.
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 100 caracteres.
+display-name: Spring + Kotlin
+
+# Trata-se da imagem utilizada como logo do template.
+# Caso a picture esteja fora do repo colocar uma url externa
+# Caso a picture esteja no repo fornecer o path
+# É um campo não obrigatório, e caso for preenchido deve ser uma string de 0 a 200 caracteres.
+picture: "https://symbols.getvecta.com/stencil_96/69_spring-framework-icon.d563816ce9.svg"
+
+# Trata-se da categoria a qual o template pertence.
+# É um campo não obrigatório e caso for preenchido deve ser uma string pertencente a lista de categorias válidas.
+# Para consultar as categorias válidas consulte a documentação oficial.
+# Caso seja preenchido com uma categoria não válida, a mesma não aparecerá no portal.
+category: backend
+
+# Trata-se das tecnologias as quais o template é compativel.
+# É um campo não obrigatório, e caso for preenchido deve ser uma lista de strings livres.
+compatibility:
+  - spring
+  - kotlin 
+
+# Trata-se de um arquivo .md que explica em detalhes o objetivo do template.
+# Por padrão o valor é about.md
+# É um campo não obrigatório, mas caso seja passado, validamos se o arquivo realmente existe no repo.
+# Se passado, deve ser uma string com o nome do arquivo com extensão .md ou caminho do arquivo .md no repo.
+about: about.md
+
+# Trata-se de um arquivo .md que explica em detalhes como o template pode ser utilizado.
+# Por padrão o valor é usage.md
+# É um campo não obrigatório, mas caso seja passado, validamos se o arquivo realmente existe no repo.
+# Se passado, deve ser uma string com o nome do arquivo com extensão .md ou caminho do arquivo .md no repo.
+usage: usage.md
+
+# Trata-se de um arquivo .md que explica em detalhes um caso de uso em que o template pode ser aplicado.
+# Por padrão o valor é useCase.md
+# É um campo não obrigatório, mas caso seja passado, validamos se o arquivo realmente existe no repo.
+# Se passado, deve ser uma string com o nome do arquivo com extensão .md ou caminho do arquivo .md no repo.
+use-case: useCase.md
+
+# Trata-se de um arquivo .md que explica em detalhes como o template foi implementado.
+# Por padrão o valor é implementation.md
+# É um campo não obrigatório, mas caso seja passado, validamos se o arquivo realmente existe no repo.
+# Se passado, deve ser uma string com o nome do arquivo com extensão .md ou caminho do arquivo .md no repo.
+implementation: implementation.md
+
+
+
+
